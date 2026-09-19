@@ -1,0 +1,133 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "MiniBlog API",
+    "version": "1.0.0",
+    "description": "API REST para un mini blog, con autores y posts, desarrollada con Node.js, Express y PostgreSQL."
+  },
+  "servers": [
+    { "url": "http://localhost:3000" }
+  ],
+  "paths": {
+    "/authors": {
+      "get": {
+        "summary": "Obtener todos los autores",
+        "responses": { "200": { "description": "Lista de autores" } }
+      },
+      "post": {
+        "summary": "Crear un autor nuevo",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string" },
+                  "bio": { "type": "string" }
+                },
+                "required": ["name", "email"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Autor creado" },
+          "400": { "description": "Faltan datos obligatorios" }
+        }
+      }
+    },
+    "/authors/{id}": {
+      "get": {
+        "summary": "Obtener un autor por id",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": {
+          "200": { "description": "Autor encontrado" },
+          "404": { "description": "Autor no encontrado" }
+        }
+      },
+      "put": {
+        "summary": "Actualizar un autor",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": {
+          "200": { "description": "Autor actualizado" },
+          "404": { "description": "Autor no encontrado" }
+        }
+      },
+      "delete": {
+        "summary": "Borrar un autor",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": {
+          "204": { "description": "Autor borrado" },
+          "404": { "description": "Autor no encontrado" }
+        }
+      }
+    },
+    "/posts": {
+      "get": {
+        "summary": "Obtener todos los posts",
+        "responses": { "200": { "description": "Lista de posts" } }
+      },
+      "post": {
+        "summary": "Crear un post nuevo",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "content": { "type": "string" },
+                  "author_id": { "type": "integer" }
+                },
+                "required": ["title", "content", "author_id"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": { "description": "Post creado" },
+          "400": { "description": "Faltan datos obligatorios" }
+        }
+      }
+    },
+    "/posts/{id}": {
+      "get": {
+        "summary": "Obtener un post por id",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": {
+          "200": { "description": "Post encontrado" },
+          "404": { "description": "Post no encontrado" }
+        }
+      },
+      "put": {
+        "summary": "Actualizar un post",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": {
+          "200": { "description": "Post actualizado" },
+          "404": { "description": "Post no encontrado" }
+        }
+      },
+      "delete": {
+        "summary": "Borrar un post",
+        "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": {
+          "204": { "description": "Post borrado" },
+          "404": { "description": "Post no encontrado" }
+        }
+      }
+    },
+    "/posts/author/{authorId}": {
+      "get": {
+        "summary": "Obtener los posts de un autor puntual",
+        "parameters": [{ "name": "authorId", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "responses": {
+          "200": { "description": "Autor con sus posts" },
+          "404": { "description": "Autor no encontrado" }
+        }
+      }
+    }
+  }
+}

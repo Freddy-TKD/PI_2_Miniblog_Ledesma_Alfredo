@@ -4,7 +4,7 @@
   "description": "API REST Miniblog desarrollada con Node.js, Express y PostgreSQL",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "vitest run",
     "dev": "node --watch --env-file=.env src/server.js"
   },
   "keywords": [],
@@ -13,6 +13,12 @@
   "type": "module",
   "dependencies": {
     "express": "^5.2.1",
-    "pg": "^8.23.0"
+    "pg": "^8.23.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "dotenv": "^18.0.0",
+    "supertest": "^7.2.2",
+    "vitest": "^5.0.1"
   }
 }

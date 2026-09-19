@@ -27,5 +27,6 @@ export const updateAuthor = async (id, name, email, bio) => {
 }
 
 export const deleteAuthor = async (id) => {
-  await pool.query("DELETE FROM authors WHERE id = $1", [id])
+  const result = await pool.query("DELETE FROM authors WHERE id = $1 RETURNING *", [id])
+  return result.rows[0]
 }
