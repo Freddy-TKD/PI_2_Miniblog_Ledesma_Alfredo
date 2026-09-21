@@ -1,3 +1,8 @@
+## Deploy
+
+- URL pública: https://pi2miniblogledesmaalfredo-production.up.railway.app
+- Documentación interactiva (Swagger): https://pi2miniblogledesmaalfredo-production.up.railway.app/api-docs
+
 # MiniBlog API
 
 API REST para un mini blog, desarrollada con Node.js, Express y PostgreSQL. Proyecto Integrador 2 — Módulo 2, Henry.
@@ -47,10 +52,3 @@ npm test
 - `POST /posts`
 - `PUT /posts/:id`
 - `DELETE /posts/:id`
-
-## Deploy
-
-## Deploy
-
-- URL pública: https://pi2miniblogledesmaalfredo-production.up.railway.app
-- Documentación interactiva (Swagger): https://pi2miniblogledesmaalfredo-production.up.railway.app/api-docs

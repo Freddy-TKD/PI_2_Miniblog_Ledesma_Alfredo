@@ -28,3 +28,6 @@ Pedí revisar y corregir el formato de mi `README.md`, y ayuda para armar el arc
 
 ## Material de estudio
 Pedí armar un documento en PDF con los pasos correctos (sin los errores intermedios) y sus explicaciones, para usarlo como ayuda memoria, indicando que se fuera actualizando a medida que avanzaba el proyecto en vez de generar uno nuevo cada vez.
+
+## Verificación final contra la rúbrica
+Pedí revisar el proyecto completo contra las 6 categorías de la rúbrica oficial y corregir todo lo necesario para llegar al nivel "Excelente". Esto llevó a encontrar y arreglar un bug real (borrar un post devolvía 404 aunque sí se borraba), agregar el control de email duplicado que pedía la rúbrica, ampliar los tests a 12, completar el OpenAPI y corregir un error de formato en el README. También se diagnosticó un problema de deploy (un contenedor viejo que quedó activo un rato después de un redeploy), resuelto con un segundo redeploy manual.

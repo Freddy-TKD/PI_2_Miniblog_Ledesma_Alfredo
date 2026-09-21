@@ -11,10 +11,12 @@
   "paths": {
     "/authors": {
       "get": {
+        "tags": ["Authors"],
         "summary": "Obtener todos los autores",
         "responses": { "200": { "description": "Lista de autores" } }
       },
       "post": {
+        "tags": ["Authors"],
         "summary": "Crear un autor nuevo",
         "requestBody": {
           "required": true,
@@ -40,6 +42,7 @@
     },
     "/authors/{id}": {
       "get": {
+        "tags": ["Authors"],
         "summary": "Obtener un autor por id",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
         "responses": {
@@ -48,6 +51,7 @@
         }
       },
       "put": {
+        "tags": ["Authors"],
         "summary": "Actualizar un autor",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
         "requestBody": {
@@ -73,6 +77,7 @@
         }
       },
       "delete": {
+        "tags": ["Authors"],
         "summary": "Borrar un autor",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
         "responses": {
@@ -83,10 +88,12 @@
     },
     "/posts": {
       "get": {
+        "tags": ["Posts"],
         "summary": "Obtener todos los posts",
         "responses": { "200": { "description": "Lista de posts" } }
       },
       "post": {
+        "tags": ["Posts"],
         "summary": "Crear un post nuevo",
         "requestBody": {
           "required": true,
@@ -112,6 +119,7 @@
     },
     "/posts/{id}": {
       "get": {
+        "tags": ["Posts"],
         "summary": "Obtener un post por id",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
         "responses": {
@@ -120,6 +128,7 @@
         }
       },
       "put": {
+        "tags": ["Posts"],
         "summary": "Actualizar un post",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
         "requestBody": {
@@ -144,6 +153,7 @@
         }
       },
       "delete": {
+        "tags": ["Posts"],
         "summary": "Borrar un post",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
         "responses": {
@@ -154,6 +164,7 @@
     },
     "/posts/author/{authorId}": {
       "get": {
+        "tags": ["Posts"],
         "summary": "Obtener los posts de un autor puntual",
         "parameters": [{ "name": "authorId", "in": "path", "required": true, "schema": { "type": "integer" } }],
         "responses": {
