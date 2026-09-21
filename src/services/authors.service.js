@@ -10,6 +10,11 @@ export const getAuthorById = async (id) => {
   return result.rows[0]
 }
 
+export const getAuthorByEmail = async (email) => {
+  const result = await pool.query("SELECT * FROM authors WHERE email = $1", [email])
+  return result.rows[0]
+}
+
 export const createAuthor = async (name, email, bio) => {
   const result = await pool.query(
     "INSERT INTO authors (name, email, bio) VALUES ($1, $2, $3) RETURNING *",

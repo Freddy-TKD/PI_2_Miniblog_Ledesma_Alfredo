@@ -50,7 +50,7 @@ npm test
 
 ## Deploy
 
-- ## Deploy
+## Deploy
 
 - URL pública: https://pi2miniblogledesmaalfredo-production.up.railway.app
 - Documentación interactiva (Swagger): https://pi2miniblogledesmaalfredo-production.up.railway.app/api-docs

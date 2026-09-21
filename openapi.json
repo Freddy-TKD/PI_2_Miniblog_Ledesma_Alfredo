@@ -34,7 +34,7 @@
         },
         "responses": {
           "201": { "description": "Autor creado" },
-          "400": { "description": "Faltan datos obligatorios" }
+          "400": { "description": "Faltan datos obligatorios o el email ya está en uso" }
         }
       }
     },
@@ -50,8 +50,25 @@
       "put": {
         "summary": "Actualizar un autor",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "name": { "type": "string" },
+                  "email": { "type": "string" },
+                  "bio": { "type": "string" }
+                },
+                "required": ["name", "email"]
+              }
+            }
+          }
+        },
         "responses": {
           "200": { "description": "Autor actualizado" },
+          "400": { "description": "Faltan datos obligatorios o el email ya está en uso" },
           "404": { "description": "Autor no encontrado" }
         }
       },
@@ -105,6 +122,22 @@
       "put": {
         "summary": "Actualizar un post",
         "parameters": [{ "name": "id", "in": "path", "required": true, "schema": { "type": "integer" } }],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "title": { "type": "string" },
+                  "content": { "type": "string" },
+                  "author_id": { "type": "integer" }
+                },
+                "required": ["title", "content", "author_id"]
+              }
+            }
+          }
+        },
         "responses": {
           "200": { "description": "Post actualizado" },
           "404": { "description": "Post no encontrado" }

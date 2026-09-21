@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { getAllAuthors, getAuthorById, createAuthor, updateAuthor, deleteAuthor } from "../services/authors.service.js"
+import { getAllAuthors, getAuthorById, getAuthorByEmail, createAuthor, updateAuthor, deleteAuthor } from "../services/authors.service.js"
 
 const router = Router()
 
@@ -21,12 +21,20 @@ router.post("/", async (req, res) => {
   if (!name || !email) {
     return res.status(400).json({ error: "Faltan datos obligatorios: name y email" })
   }
+  const existingAuthor = await getAuthorByEmail(email)
+  if (existingAuthor) {
+    return res.status(400).json({ error: "Ese email ya está en uso" })
+  }
   const newAuthor = await createAuthor(name, email, bio)
   res.status(201).json(newAuthor)
 })
 
 router.put("/:id", async (req, res) => {
   const { name, email, bio } = req.body
+  const existingAuthor = await getAuthorByEmail(email)
+  if (existingAuthor && existingAuthor.id !== Number(req.params.id)) {
+    return res.status(400).json({ error: "Ese email ya está en uso" })
+  }
   const updated = await updateAuthor(req.params.id, name, email, bio)
   if (!updated) {
     return res.status(404).json({ error: "Autor no encontrado" })

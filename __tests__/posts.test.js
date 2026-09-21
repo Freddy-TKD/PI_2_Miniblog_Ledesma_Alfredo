@@ -23,4 +23,29 @@ describe("Posts endpoints", () => {
     const res = await request(app).delete("/posts/999999")
     expect(res.status).toBe(404)
   })
+
+  test("PUT /posts/:id actualiza un post existente", async () => {
+    const created = await request(app).post("/posts").send({
+      title: "Post para actualizar",
+      content: "Contenido original",
+      author_id: 1
+    })
+    const res = await request(app).put(`/posts/${created.body.id}`).send({
+      title: "Post actualizado",
+      content: "Contenido actualizado",
+      author_id: 1
+    })
+    expect(res.status).toBe(200)
+    expect(res.body.title).toBe("Post actualizado")
+  })
+
+  test("DELETE /posts/:id borra un post existente", async () => {
+    const created = await request(app).post("/posts").send({
+      title: "Post para borrar",
+      content: "Se va a borrar",
+      author_id: 1
+    })
+    const res = await request(app).delete(`/posts/${created.body.id}`)
+    expect(res.status).toBe(204)
+  })
 })
