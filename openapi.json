@@ -6,8 +6,10 @@
     "description": "API REST para un mini blog, con autores y posts, desarrollada con Node.js, Express y PostgreSQL."
   },
   "servers": [
-    { "url": "http://localhost:3000" }
+    { "url": "https://pi2miniblogledesmaalfredo-production.up.railway.app", "description": "Producción (Railway)" },
+    { "url": "http://localhost:3000", "description": "Local" }
   ],
+  
   "paths": {
     "/authors": {
       "get": {
