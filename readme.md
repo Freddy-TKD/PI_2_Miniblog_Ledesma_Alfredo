@@ -424,22 +424,17 @@ Este proyecto fue desarrollado con apoyo de inteligencia artificial como ayuda d
 
 A continuación, algunas capturas de ejemplo de las consultas que se hicieron a la IA para ordenar dudas, corregir errores y aprender paso a paso.
 
-### Ayuda para configurar el entorno
+### Ayuda para solucionar la visualizacion de las etiquetas en Swagger
+![Se cosulta porque no se muestra bien en Swagger las etiquetas](/Screenshoot_IA/consulta_Etiquetas_Swagger.png)
 
-![Consulta sobre configuración del entorno](docs/screenshots/ai/01-env.svg)
 
-### Ayuda para validaciones y manejo de errores
+### Donde Crear el .env y .gitignore y no ejecutar el git Init
 
-![Consulta sobre errores y validaciones](docs/screenshots/ai/02-validations.svg)
+![donde se colocan los archivos.env y .gitignore](docs/screenshots/ai/02-validations.svg)
 
-### Ayuda para tests y deploy
+### Es correcto el icono para este tipo de archivo?
+![Se consulta a la IA si es correcto el icono del archivo creado](/Screenshoot_IA/el%20icono%20AuthorServiceJS.png)
 
-![Consulta sobre testing y deploy](docs/screenshots/ai/03-tests.svg)
+### Como crear un Autor en ThunerClient
 
-### Ayuda para entender la arquitectura del proyecto
-
-![Consulta sobre routes, services y flujo del backend](docs/screenshots/ai/04-posts-flow.svg)
-
-### Ayuda para simplificar la documentación para un developer nuevo
-
-![Consulta sobre README y onboarding](docs/screenshots/ai/05-readme-fix.svg)
+![Consulta sobre sobre como se usa thunderClient](/Screenshoot_IA/como%20crear%20Athors%20en%20Thunder.png)
