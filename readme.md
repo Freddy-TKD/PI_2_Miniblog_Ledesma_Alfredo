@@ -409,11 +409,11 @@ A continuación, algunas capturas de ejemplo de las consultas que se hicieron a 
 
 
 ### Donde Crear el .env y .gitignore y no ejecutar el git Init
-![donde se colocan los archivos.env y .gitignore](/Screenshoot_IA/donde_creo_envy%20el%20gitignore.png)
+![donde se colocan los archivos.env y .gitignore](/Screenshoot_IA/donde_creo_env_y_el_gitignore.png)
 
 ### Es correcto el icono para este tipo de archivo?
-![Se consulta a la IA si es correcto el icono del archivo creado](/Screenshoot_IA/el%20icono%20AuthorServiceJS.png)
+![Se consulta a la IA si es correcto el icono del archivo creado](/Screenshoot_IA/dudas_el_icono_AuthorServiceJS.png)
 
 ### Como crear un Autor en ThunerClient
 
-![Consulta sobre sobre como se usa thunderClient](/Screenshoot_IA/como%20crear%20Athors%20en%20Thunder.png)
+![Consulta sobre sobre como se usa thunderClient](/Screenshoot_IA/como_crear_Authors_en_Thunder.png)
