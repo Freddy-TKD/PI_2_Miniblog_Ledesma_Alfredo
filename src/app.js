@@ -2,6 +2,7 @@ import swaggerUi from "swagger-ui-express"
 import { readFileSync } from "fs"
 import authorsRouter from "./routes/authors.routes.js"
 import postsRouter from "./routes/posts.routes.js"
+import errorHandler from "./middlewares/errorHandler.js"
 import express from "express"
 const app = express()
 
@@ -16,9 +17,6 @@ app.get("/", (req, res) => {
   res.json({ message: "MiniBlog API funcionando" })
 })
 
-app.use((err, req, res, next) => {
-  console.error(err)
-  res.status(500).json({ error: "Algo salió mal en el servidor" })
-})
+app.use(errorHandler)
 
 export default app

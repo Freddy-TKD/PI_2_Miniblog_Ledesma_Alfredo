@@ -1,20 +1,16 @@
-// src/routes/posts.routes.js
-import { Router } from "express"
 import { getAllPosts, getPostById, getPostsByAuthor, createPost, updatePost, deletePost } from "../services/posts.service.js"
 import { getAuthorById } from "../services/authors.service.js"
 
-const router = Router()
-
-router.get("/", async (req, res, next) => {
+export const listPosts = async (req, res, next) => {
   try {
     const posts = await getAllPosts()
     res.json(posts)
   } catch (error) {
     next(error)
   }
-})
+}
 
-router.get("/author/:authorId", async (req, res, next) => {
+export const getPostsFromAuthor = async (req, res, next) => {
   try {
     const authorId = Number(req.params.authorId)
     const author = await getAuthorById(authorId)
@@ -26,9 +22,9 @@ router.get("/author/:authorId", async (req, res, next) => {
   } catch (error) {
     next(error)
   }
-})
+}
 
-router.get("/:id", async (req, res, next) => {
+export const getPost = async (req, res, next) => {
   try {
     const post = await getPostById(req.params.id)
     if (!post) {
@@ -38,9 +34,9 @@ router.get("/:id", async (req, res, next) => {
   } catch (error) {
     next(error)
   }
-})
+}
 
-router.post("/", async (req, res, next) => {
+export const addPost = async (req, res, next) => {
   try {
     const { title, content, author_id } = req.body
     if (!title || !content || !author_id) {
@@ -51,9 +47,9 @@ router.post("/", async (req, res, next) => {
   } catch (error) {
     next(error)
   }
-})
+}
 
-router.put("/:id", async (req, res, next) => {
+export const editPost = async (req, res, next) => {
   try {
     const { title, content, author_id } = req.body
     const updated = await updatePost(req.params.id, title, content, author_id)
@@ -64,9 +60,9 @@ router.put("/:id", async (req, res, next) => {
   } catch (error) {
     next(error)
   }
-})
+}
 
-router.delete("/:id", async (req, res, next) => {
+export const removePost = async (req, res, next) => {
   try {
     const deleted = await deletePost(req.params.id)
     if (!deleted) {
@@ -76,6 +72,4 @@ router.delete("/:id", async (req, res, next) => {
   } catch (error) {
     next(error)
   }
-})
-
-export default router
+}
