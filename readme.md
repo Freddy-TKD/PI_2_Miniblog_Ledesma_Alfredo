@@ -210,31 +210,11 @@ curl http://localhost:3000/authors
 
 Eso devuelve la lista de autores.
 
-## Capturas de ejemplo de la API
-
-Estas imágenes muestran respuestas reales de la API en distintos casos de uso. Sirven para que una persona que no sabe programar vea cómo se ve la app en la práctica.
-
-### 1. Consulta al inicio
-
-![Inicio de la API](docs/screenshots/01-root.svg)
-
-### 2. Obtener todos los autores
-
-![Listado de autores](docs/screenshots/02-authors.svg)
-
-### 3. Obtener todos los posts
-
-![Listado de posts](docs/screenshots/03-posts.svg)
-
-### 4. Obtener posts de un autor específico
-
-![Posts de un autor](docs/screenshots/04-author-posts.svg)
-
-### 5. Crear un autor nuevo
-
-![Crear autor](docs/screenshots/05-create-author.svg)
-
 ## Endpoints principales
+
+https://pi2miniblogledesmaalfredo-production.up.railway.app/authors
+
+https://pi2miniblogledesmaalfredo-production.up.railway.app/posts
 
 La API tiene estos endpoints importantes:
 
@@ -429,8 +409,7 @@ A continuación, algunas capturas de ejemplo de las consultas que se hicieron a 
 
 
 ### Donde Crear el .env y .gitignore y no ejecutar el git Init
-
-![donde se colocan los archivos.env y .gitignore](docs/screenshots/ai/02-validations.svg)
+![donde se colocan los archivos.env y .gitignore](/Screenshoot_IA/donde_creo_envy%20el%20gitignore.png)
 
 ### Es correcto el icono para este tipo de archivo?
 ![Se consulta a la IA si es correcto el icono del archivo creado](/Screenshoot_IA/el%20icono%20AuthorServiceJS.png)
