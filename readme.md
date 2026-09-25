@@ -400,9 +400,7 @@ Si alguien quiere seguir trabajando con este proyecto, lo más importante es ent
 
 ## Uso de IA
 
-Este proyecto fue desarrollado con apoyo de inteligencia artificial como ayuda de aprendizaje y apoyo durante la implementación. El detalle completo se registra en [prompts.md](prompts.md).
-
-A continuación, algunas capturas de ejemplo de las consultas que se hicieron a la IA para ordenar dudas, corregir errores y aprender paso a paso.
+Este proyecto fue desarrollado con apoyo de inteligencia artificial como ayuda de aprendizaje y apoyo durante la implementación. El detalle completo se registra a continuación, algunas capturas de ejemplo de las consultas que se hicieron a la IA para ordenar dudas, corregir errores y aprender paso a paso.
 
 ### Ayuda para solucionar la visualizacion de las etiquetas en Swagger
 ![Se cosulta porque no se muestra bien en Swagger las etiquetas](/Screenshoot_IA/consulta_Etiquetas_Swagger.png)
